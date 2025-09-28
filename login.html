@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - OTT Platform</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button type="submit">Log In</button>
+  </form>
+  <p style="text-align:center; margin-top:12px;">
+    Don't have an account?
+    <a href="signup.html" id="signupLink">Sign Up</a>
+  </p>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const res = await fetch('http://localhost:3000/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        // Check if the response is JSON
+        const contentType = res.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new Error('Server did not return JSON. Check your backend.');
+        }
+
+        const data = await res.json();
+        if (data.success) {
+          alert('✅ Logged in successfully!');
+          window.location.href = 'home.html'; // Redirects to home.html
+        } else {
+          alert('❌ ' + data.message);
+        }
+      } catch (err) {
+        alert('❌ Error: ' + err.message);
+      }
+    });
+  </script>
+</body>
+</html>

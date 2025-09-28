@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #212121;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6f00; /* Highlight color on hover */
+}
+
+/* Section Styles */
+#sony-music {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#sony-music .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.channel-info {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Music Grid */
+.music-grid {
+    display: inline-block;
+    width: 30%;
+    margin: 0 10px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.music-grid:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.music-grid img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #212121;
+}
+
+.music-title {
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    background-color: #212121;
+    color: #fff;
+    margin-top: 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.music-grid a {
+    display: block;
+    text-decoration: none;
+}
+
+/* See More Button */
+.more-music {
+    margin-top: 40px;
+}
+
+.action-button {
+    background-color: #ff6f00;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #e65c00;
+}
+
+/* Footer */
+footer {
+    background-color: #212121;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .music-grid {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .music-grid {
+        width: 100%;
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .channel-info {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Body Styles */
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: transparent;
+    padding: 2rem 0 1rem 0;
+    box-shadow: none;
+}
+
+.header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-brand {
+    height: 60px;
+    width: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #23252655;
+    background: #232526;
+    padding: 8px;
+}
+
+.main-nav {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #b388ff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    background: rgba(179,136,255,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+
+.main-nav a:hover {
+    background: #b388ff;
+    color: #232526;
+}
+
+/* Banner Section */
+#banner-section {
+    background: linear-gradient(90deg, #8fd3f4 0%, #a6c1ee 100%);
+    color: #232526;
+    padding: 60px 0 40px 0;
+    text-align: center;
+    border-radius: 0 0 36px 36px;
+    box-shadow: 0 8px 32px 0 #23252633;
+}
+
+.banner__title {
+    font-size: 2.7rem;
+    font-weight: 900;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+    color: #232526;
+    text-shadow: 0 2px 12px #fff8;
+}
+
+.banner__info {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #232526cc;
+}
+
+.banner__overview {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #232526b0;
+}
+
+.action-buttons-cont {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.action-button {
+    background: linear-gradient(90deg, #b388ff 0%, #8fd3f4 100%);
+    color: #232526;
+    padding: 14px 36px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 5px 0;
+    box-shadow: 0 4px 16px #b388ff33, 0 1.5px 4px #23252622;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.action-button:hover {
+    background: linear-gradient(90deg, #8fd3f4 0%, #b388ff 100%);
+    color: #fff;
+    box-shadow: 0 8px 32px #b388ff33;
+}
+
+/* TV Shows Section */
+.tv-shows-section {
+    padding: 70px 0 50px 0;
+    background: transparent;
+    text-align: center;
+}
+
+.movie-section-heading {
+    font-size: 2.2rem;
+    margin-bottom: 38px;
+    color: #b388ff;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 12px #8fd3f488;
+}
+
+/* Popular TV Shows as Cards */
+.tv-shows-section a {
+    display: inline-block;
+    margin: 24px 18px;
+    text-decoration: none;
+    transition: transform 0.22s, box-shadow 0.22s;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 #23252655, 0 1.5px 4px #b388ff22;
+    background: linear-gradient(135deg, #232526 60%, #8fd3f4 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.tv-shows-section a:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 48px 0 #b388ff55;
+}
+
+.clickable-image {
+    display: block;
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 24px;
+    transition: filter 0.2s;
+    filter: grayscale(10%) brightness(0.95);
+}
+
+.tv-shows-section a:hover .clickable-image {
+    filter: grayscale(0%) brightness(1.05) drop-shadow(0 0 16px #b388ff88);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .clickable-image {
+        width: 90vw;
+        max-width: 350px;
+        height: 160px;
+    }
+    .tv-shows-section a {
+        margin: 18px 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-cont {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .banner__title {
+        font-size: 2rem;
+    }
+    .movie-section-heading {
+        font-size: 1.3rem;
+    }
+    .clickable-image {
+        width: 90vw;
+        max-width: 98vw;
+        height: 120px;
+    }
+    .tv-shows-section {
+        padding: 30px 0 20px 0;
+    }
+}

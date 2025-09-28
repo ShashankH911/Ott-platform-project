@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body & Background */
+body {
+    background-color: #181818;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Header Section */
+#header {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    z-index: 100;
+    padding: 20px 0;
+    border-bottom: 2px solid #444;
+}
+
+.header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-cont {
+    display: flex;
+    align-items: center;
+}
+
+.header-brand {
+    width: 120px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.button {
+    display: flex;
+    list-style: none;
+    margin-left: 50px;
+}
+
+.nav-item {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f4a261;
+}
+
+.right-cont {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon,
+.Hawkins-Icon-Standard {
+    width: 34px;
+    height: 34px;
+    fill: #fff;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.search-icon:hover,
+.Hawkins-Icon-Standard:hover {
+    fill: #f4a261;
+}
+
+/* Banner Section */
+.banner-section {
+    position: relative;
+    background-image: url('path-to-your-banner-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.banner_fadeBottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+/* Movies Section */
+.movies-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.movie-card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.movie-card h3 {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #444;
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header-cont {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-cont {
+        margin-bottom: 20px;
+    }
+
+    .button {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .button .nav-item {
+        margin-right: 15px;
+    }
+
+    .movies-cont {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        padding: 20px;
+    }
+
+    .search-icon,
+    .Hawkins-Icon-Standard {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-brand {
+        width: 100px;
+    }
+
+    .movie-card h3 {
+        font-size: 16px;
+    }
+}

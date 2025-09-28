@@ -1,0 +1,126 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+#header {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+}
+
+.header-container nav ul.main-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container nav ul.main-nav li {
+    margin: 0 15px;
+}
+
+.header-container nav ul.main-nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.header-container nav ul.main-nav li a:hover {
+    background-color: #f9d342;
+    color: #1a1a1a;
+    border-radius: 5px;
+}
+
+/* Section styles */
+#Sony Pix {
+    margin: 40px 0;
+    text-align: center;
+}
+
+#Sony Pix h2 {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+#Sony Pix .channel-info {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Movie Grid */
+.movie-grid {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.movie-grid a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.movie-grid img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.movie-grid img:hover {
+    transform: scale(1.05);
+}
+
+.movie-title {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.movie-title:hover {
+    color: #f9d342;
+}
+
+/* See More Movies Button */
+.more Sports {
+    margin-top: 30px;
+}
+
+.action-button {
+    background-color: #f9d342;
+    color: #1a1a1a;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.action-button:hover {
+    background-color: #e5c000;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 1em;
+}
